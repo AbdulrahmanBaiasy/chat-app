@@ -1,0 +1,37 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="{% static 'css/output.css' %}" rel="stylesheet" />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="{% static 'favicon.ico' %}"
+    />
+  </head>
+
+  <section class="z-10 w-full padding-x">
+    {% include "components/navbar.html"%}
+  </section>
+
+  <body>
+    <main class="p-2  space-y-4">
+      <section class="max-w-6xl mx-auto relative  ">
+        {% if messages %}
+        <div class="message mb-6 p-6 bg-gray-800 text-white rounded-xl">
+          {% for message in messages %}
+          <p>{{ message }}</p>
+          {% endfor %}
+        </div>
+        {% endif %} {% block content %} {% endblock %}
+      </section>
+    </main>
+
+    {% block scripts %} {% endblock %}
+  </body>
+  <section>{% include "components/footer.html"%}</section>
+</html>

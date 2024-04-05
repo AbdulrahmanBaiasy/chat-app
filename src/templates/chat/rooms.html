@@ -1,0 +1,16 @@
+{%extends 'base.html'%}
+{%block content%}
+<section id="products" class="max-container m-4 space-y-16">
+  <div class="flex flex-col justify-start gap-5">
+    <h2 class="text-4xl font-palanquin font-bold">
+      <span class="text-coral-red"> Available </span>Rooms
+    </h2>
+    <p class="lg:max-w-lg mt-2 font-montserrat text-slate-gray">
+      Connect with friends, family, and colleagues – all in one place.
+      Discover new communities and conversations waiting to be found.
+    </p>
+  </div>
+  {% include 'chat/parts/room_list.html'%}
+</section>
+
+{%endblock content%}
