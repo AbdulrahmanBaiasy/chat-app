@@ -13,8 +13,8 @@ Admin Privileges: Grant admins the ability to create, join, and delete chat room
 ### Cloning Repo 
 
 ```
-git clone https://github.com/AbdulrahmanBaiasy/django-chat-app.git
-cd django-chat-app
+git clone https://github.com/AbdulrahmanBaiasy/chat-app.git
+cd chat-app
 ```
 
 ### Create and activate env 
